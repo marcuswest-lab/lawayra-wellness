@@ -1159,7 +1159,7 @@ p {
         <a href="#about">About</a>
         <a href="#retreats">Retreats</a>
         <a href="#team">Our Team</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Contact</a>
       </nav>
     </div>
   </header>
@@ -1175,9 +1175,9 @@ p {
       <p>Wellness retreats in the mountains of Colombia with experienced, international facilitators. Yoga, meditation, breathwork, and healing practices.</p>
       <p style="font-weight: 500; color: var(--cream);">We are located near Medellin, Colombia.</p>
       <div class="lp-hero__ctas">
-        <a href="#contact" class="btn--lp-primary">Yes, I'm ready to book now</a>
+        <a href="#about" class="btn--lp-primary">Yes, I'm ready to book now</a>
         <div class="lp-hero__secondary">
-          <a href="#contact">I have a few questions still</a>
+          <a href="#about">I have a few questions still</a>
           <a href="#about">I'd like to learn more</a>
         </div>
       </div>
@@ -1227,7 +1227,7 @@ p {
             <li>Comfortable accommodation</li>
             <li>Transportation from Medellin</li>
           </ul>
-          <a href="#contact" class="btn btn--amber" style="margin-top: 28px; display: inline-block;">Book Now <span class="arrow">&rarr;</span></a>
+          <a href="#about" class="btn btn--amber" style="margin-top: 28px; display: inline-block;">Book Now <span class="arrow">&rarr;</span></a>
         </div>
       </div>
     </div>
@@ -1266,6 +1266,15 @@ p {
           <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ BOTTOM CTA ============ -->
+  <section class="section section--olive" style="padding: 60px 0; text-align: center;">
+    <div class="container reveal">
+      <h2 style="color: var(--cream); margin-bottom: 16px;">ready to begin your journey?</h2>
+      <p style="color: var(--beige); max-width: 500px; margin: 0 auto 32px;">Fill out the form and we'll send you everything you need to know about our upcoming retreats.</p>
+      <a href="#about" class="btn--lp-primary">Get Started <span style="margin-left: 8px;">&rarr;</span></a>
     </div>
   </section>
 
@@ -1362,6 +1371,16 @@ if (revealElements.length) {
 
   revealElements.forEach(el => observer.observe(el));
 }
+  </script>
+  <script>
+    document.querySelectorAll('a[href="#about"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
