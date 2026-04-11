@@ -1137,6 +1137,129 @@ p {
     .lp-footer__socials a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08); transition: background var(--duration); }
     .lp-footer__socials a:hover { background: var(--amber); }
     .lp-footer__socials svg { width: 18px; height: 18px; fill: var(--cream); }
+
+    /* ============ A. Stats Bar ============ */
+    .lp-stats-bar {
+      background: var(--olive); padding: 48px 24px;
+    }
+    .lp-stats-bar__grid {
+      max-width: var(--container-max); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+      text-align: center;
+    }
+    .lp-stats-bar__item .number {
+      display: block; font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700;
+      color: var(--amber); line-height: 1.2; margin-bottom: 4px;
+    }
+    .lp-stats-bar__item .label {
+      display: block; font-size: 0.85rem; color: var(--sage);
+      text-transform: uppercase; letter-spacing: 0.08em; font-weight: 400;
+    }
+    @media (max-width: 768px) {
+      .lp-stats-bar__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    }
+
+    /* ============ B. Retreats & Dates ============ */
+    .lp-retreats-dates { background: var(--olive); padding: var(--section-pad) 24px; }
+    .lp-retreats-dates__header { text-align: center; margin-bottom: 48px; }
+    .lp-retreats-dates__header .label {
+      display: block; font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--sage); margin-bottom: 8px;
+    }
+    .lp-retreats-dates__header h2 { color: var(--cream); margin-bottom: 12px; }
+    .lp-retreats-dates__header p { color: var(--beige); max-width: 600px; margin: 0 auto; font-size: 0.95rem; }
+    .lp-retreats-dates__cards {
+      max-width: var(--container-max); margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+    }
+    .lp-retreat-card {
+      position: relative; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(228,160,23,0.25); border-radius: 16px;
+      padding: 40px 32px; text-align: center;
+    }
+    .lp-retreat-card__badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--amber); color: var(--olive); font-size: 0.7rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 4px 16px; border-radius: 20px;
+    }
+    .lp-retreat-card h3 { color: var(--cream); font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; }
+    .lp-retreat-card__price {
+      font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 700;
+      color: var(--amber); margin-bottom: 4px;
+    }
+    .lp-retreat-card__price-sub { font-size: 0.85rem; color: var(--sage); margin-bottom: 24px; }
+    .lp-retreat-card__dates {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;
+      margin-bottom: 28px; text-align: left;
+    }
+    .lp-retreat-card__dates span {
+      font-size: 0.85rem; color: var(--beige); padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .btn--retreat-outline {
+      display: inline-block; padding: 14px 36px; border-radius: 40px;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border: 2px solid var(--amber); color: var(--cream);
+      background: transparent; transition: background var(--duration), color var(--duration);
+    }
+    .btn--retreat-outline:hover { background: var(--amber); color: var(--olive); }
+    .btn--retreat-solid {
+      display: inline-block; padding: 14px 36px; border-radius: 40px;
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      background: var(--amber); color: var(--white); border: 2px solid var(--amber);
+      transition: background var(--duration), transform var(--duration);
+    }
+    .btn--retreat-solid:hover { background: var(--burnt-orange); border-color: var(--burnt-orange); transform: translateY(-2px); }
+    @media (max-width: 768px) {
+      .lp-retreats-dates__cards { grid-template-columns: 1fr; }
+    }
+
+    /* ============ C. Team Ratios ============ */
+    .lp-team-ratios {
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+      margin: 32px 0 40px; padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .lp-team-ratios__item { text-align: center; }
+    .lp-team-ratios__item .value {
+      display: block; font-size: 1.2rem; font-weight: 600; color: var(--amber); margin-bottom: 4px;
+    }
+    .lp-team-ratios__item .label {
+      display: block; font-size: 0.8rem; color: var(--sage);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+
+    /* ============ D. Photo Gallery ============ */
+    .lp-gallery {
+      margin-top: 48px; padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .lp-gallery__grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    }
+    .lp-gallery__grid img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px;
+      transition: transform var(--duration);
+    }
+    .lp-gallery__grid img:hover { transform: scale(1.03); }
+    @media (max-width: 768px) {
+      .lp-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ============ E. Enhanced About Contact ============ */
+    .lp-contact-details { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+    .lp-contact-details__item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.9rem; color: var(--charcoal);
+    }
+    .lp-contact-details__item .icon {
+      width: 20px; height: 20px; flex-shrink: 0; display: flex;
+      align-items: center; justify-content: center; color: var(--amber); font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -1184,6 +1307,28 @@ p {
     </div>
   </section>
 
+  <!-- ============ STATS BAR ============ -->
+  <section class="lp-stats-bar reveal">
+    <div class="lp-stats-bar__grid">
+      <div class="lp-stats-bar__item">
+        <span class="number">700+</span>
+        <span class="label">5-Star Google Reviews</span>
+      </div>
+      <div class="lp-stats-bar__item">
+        <span class="number">200+</span>
+        <span class="label">Video Testimonials</span>
+      </div>
+      <div class="lp-stats-bar__item">
+        <span class="number">13+</span>
+        <span class="label">Years of Experience</span>
+      </div>
+      <div class="lp-stats-bar__item">
+        <span class="number">$695</span>
+        <span class="label">Starting Price (All Inclusive)</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ ABOUT + LEAD FORM ============ -->
   <section class="section section--cream" id="about">
     <div class="container">
@@ -1194,9 +1339,22 @@ p {
           <p>Yoga and meditation take place in the maloka, a large wooden ceremonial space used for movement, meditation, and ritual. People come from around the world to spend time in both personal reflection and community.</p>
           <p>LaWayra hosts wellness retreats with experienced, international facilitators and guides, creating a space for practical learning and spiritual exploration.</p>
           <p>Guests are supported through reflection, creative practices, shared meals, and embodied movement.</p>
+          <div class="lp-contact-details">
+            <div class="lp-contact-details__item">
+              <span class="icon">&#9906;</span>
+              <span>Mountains near Medellin, Colombia</span>
+            </div>
+            <div class="lp-contact-details__item">
+              <span class="icon">&#128197;</span>
+              <span>Calendar Open Until December 2026</span>
+            </div>
+            <div class="lp-contact-details__item">
+              <span class="icon">&#9733;</span>
+              <span>700+ 5-star Google reviews</span>
+            </div>
+          </div>
         </div>
         <div class="lp-form-card reveal" id="contact">
-          <h3>fill out the form below to receive more information about our retreats</h3>
           <iframe src="https://api.leadconnectorhq.com/widget/form/Mx6j5nJzH1pO7NppgNGD" width="100%" height="500" style="border: none; overflow: hidden;" allowfullscreen></iframe>
         </div>
       </div>
@@ -1233,6 +1391,46 @@ p {
     </div>
   </section>
 
+  <!-- ============ RETREATS & DATES ============ -->
+  <section class="lp-retreats-dates reveal">
+    <div class="lp-retreats-dates__header">
+      <span class="label">Choose Your Path</span>
+      <h2>Choose Your Transformation</h2>
+      <p>All retreats are fully inclusive: accommodation, all meals, practices, transportation from Medellin, and facilitator support throughout your stay.</p>
+    </div>
+    <div class="lp-retreats-dates__cards">
+      <!-- Card 1: 4-Day -->
+      <div class="lp-retreat-card">
+        <h3>4-Day Retreat</h3>
+        <div class="lp-retreat-card__price">$695 USD</div>
+        <div class="lp-retreat-card__price-sub">per person</div>
+        <div class="lp-retreat-card__dates">
+          <span>Apr 16 &ndash; 19</span>
+          <span>Apr 30 &ndash; May 3</span>
+          <span>May 21 &ndash; 24</span>
+          <span>Jun 4 &ndash; 7</span>
+          <span>Jun 25 &ndash; 28</span>
+        </div>
+        <a href="#about" class="btn--retreat-outline">Enquire About This Retreat</a>
+      </div>
+      <!-- Card 2: One-Week -->
+      <div class="lp-retreat-card">
+        <div class="lp-retreat-card__badge">Popular</div>
+        <h3>One-Week Retreat</h3>
+        <div class="lp-retreat-card__price">$995 USD</div>
+        <div class="lp-retreat-card__price-sub">per person</div>
+        <div class="lp-retreat-card__dates">
+          <span>Apr 20 &ndash; 26</span>
+          <span>May 4 &ndash; 10</span>
+          <span>May 25 &ndash; 31</span>
+          <span>Jun 8 &ndash; 14</span>
+          <span>Jun 29 &ndash; Jul 5</span>
+        </div>
+        <a href="#about" class="btn--retreat-solid">Enquire About This Retreat</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ OUR TEAM ============ -->
   <section class="section section--olive" id="team" style="color: var(--cream);">
     <div class="container">
@@ -1241,12 +1439,40 @@ p {
           <h2 style="margin-bottom: 24px; color: var(--cream);">our team</h2>
           <p style="color: var(--beige);">Our retreat guide, Brigitte Kolibab, has been teaching yoga and meditation for 13 years and facilitating community spaces around the world. Brigitte has an intuitive ability to meet you where you are and guide you toward feeling more like yourself and more comfortable as you are.</p>
           <p style="color: var(--beige);">Through her exploration around the world, she has connected with healers in India, Indonesia, the United States, Italy, Turkey, and Colombia. These facilitators come from many different backgrounds and offer their work at LaWayra. Each brings a unique specialty, including breathwork, massage, reiki and other energy work, art, poetry, sound healing, gymnastic inspired play, and yoga practices such as Hatha, Vinyasa, Yin, and Ashtanga.</p>
+          <!-- Team Ratios -->
+          <div class="lp-team-ratios">
+            <div class="lp-team-ratios__item">
+              <span class="value">1:2-3</span>
+              <span class="label">Facilitator to Guest Ratio</span>
+            </div>
+            <div class="lp-team-ratios__item">
+              <span class="value">&#127482;&#127480; &#127464;&#127462; &#127466;&#127482;</span>
+              <span class="label">International Organizers</span>
+            </div>
+            <div class="lp-team-ratios__item">
+              <span class="value">100%</span>
+              <span class="label">English-Language Retreats</span>
+            </div>
+          </div>
         </div>
         <div class="lp-team-photos">
           <img src="https://marcuswest-lab.github.io/lawayra-wellness/images/facilitator.png" alt="LaWayra facilitator">
           <img src="https://marcuswest-lab.github.io/lawayra-wellness/images/team.png" alt="LaWayra team">
           <img src="https://marcuswest-lab.github.io/lawayra-wellness/images/facilitators.png" alt="LaWayra facilitators">
           <img src="https://marcuswest-lab.github.io/lawayra-wellness/images/retreat-space-2.png" alt="LaWayra retreat space">
+        </div>
+      </div>
+      <!-- Photo Gallery -->
+      <div class="lp-gallery reveal">
+        <div class="lp-gallery__grid">
+          <img src="https://lawayrawellness.com/wp-content/uploads/2026/02/WhatsApp-Image-2024-09-11-at-21.49.26_5ceeb659-980x713-1.jpg" alt="LaWayra retreat life" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2026/02/2-400x284.png" alt="LaWayra retreat" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2026/02/4-400x284.png" alt="LaWayra retreat" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-11-at-21.49.51_0c0ba695-400x284.jpg" alt="LaWayra retreat" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2026/02/6-400x284.png" alt="LaWayra retreat" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2026/02/13-400x284.png" alt="LaWayra retreat" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-11-at-21.49.26_5ceeb659-400x284.jpg" alt="LaWayra retreat" loading="lazy">
+          <img src="https://lawayraretreat.com/wp-content/uploads/2026/02/11-400x284.png" alt="LaWayra retreat" loading="lazy">
         </div>
       </div>
     </div>
